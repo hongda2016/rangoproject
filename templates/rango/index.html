@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Range</title>
+</head>
+
+</body>
+<h1>欢迎来到Rango！</h1>
+    {% if categories %}
+    <ul>
+    {% for category in categories %}
+    <li><a href ="/rango/category/{{ category.slug }}">{{ category.name }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <strong>目前还没有可用分类。</strong>
+    {% endif %}
+    </body>
+</html>
